@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --colorCirculo: black;
+}
+
 body{
     background-image: url("imagenes/matrix-code.gif");
     background-repeat: no-repeat;
@@ -15,40 +19,33 @@ body{
     padding: 0;
 }
 .circulo-negro{
-    background: radial-gradient(circle, #000 50%, transparent);
+    background: radial-gradient(circle, var(--colorCirculo) 50%, transparent);
     backdrop-filter: blur(2px);
 }
 .sidebar {
     position: fixed;
-    top: 60%;
-    left: 2rem;
+    top:32.5rem;
+    left:2rem;
     transform: translateY(-45%);
-    width: 70px;
-    height: auto;
-    padding: 1.5rem 0;
+    width: 12vh;
+    height: 30vh;
     background: linear-gradient(to bottom, #4fff51, #99ff99c6);
     border-radius: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .sidebar-content {
-    padding: 0;
-    width: 100%;
+    padding: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
 .sidebar .navbar-nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    gap: 0.25rem;
 }
-.sidebar .nav-item{
-    width: 2rem;
-    height: auto;
+.sidebar .nav-item {
+    width: 100%;
     text-align: center;
 }
 .sidebar .nav-item a {
