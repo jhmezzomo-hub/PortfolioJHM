@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --colorCirculo: black;
+  --colorCirculo: #020202;
+  --colorFondo: #3d3d3d
 }
 
 body{
-    background-image: url("imagenes/matrix-code.gif");
+    background-color: var(--colorFondo);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
