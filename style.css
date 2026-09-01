@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --colorCirculo: #020202;
-  --colorFondo: #3d3d3d
+  --colorVerde: #00ff00;
+  --colorFondo: #000000
 }
 
 body{
@@ -14,22 +14,32 @@ body{
     font-family: "Roboto Condensed";
     margin: 0;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 .page-layout {
     min-height: 100vh;
     padding: 0;
+    position: relative;
+    z-index: 2;
+    background-attachment: fixed;
 }
-.circulo-negro{
-    background: radial-gradient(circle, var(--colorCirculo) 50%, transparent);
-    backdrop-filter: blur(2px);
+.bordes-verdes{
+    background-image: 
+        linear-gradient(90deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde)),
+        linear-gradient(90deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde)),
+        linear-gradient(0deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde)),
+        linear-gradient(0deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde));
+    background-size: 100% 8px, 100% 8px, 8px 100%, 8px 100%;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    background-repeat: no-repeat;
 }
 .sidebar {
     position: fixed;
-    top:32.5rem;
-    left:2rem;
-    transform: translateY(-45%);
-    width: 12vh;
-    height: 30vh;
+    top:75%;
+    left:1.5rem;
+    transform: translateY(-50%);
+    width: 8vw;
+    height: 35vh;
     background: linear-gradient(to bottom, #4fff51, #99ff99c6);
     border-radius: 4rem;
 }
@@ -56,27 +66,44 @@ body{
     overflow:hidden;
     transition: background-color 0.2s ease;
 }
+.sidebar .nav-item a img{
+    width: 100%;
+    height: auto;
+}
 .sidebar .nav-item a:hover {
     background-color: #52864d;
 }
 .main-content {
     margin-left: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 h1{
-  color: #98ff8f;
-  -webkit-text-stroke: 0.025rem #60785e;
-  text-align: center;
-  margin: 0;
-  padding: 2.5rem;
-  text-shadow: 0 0 5px #98ff8f, 0 0 10px #98ff8f, 0 0 15px #98ff8f, 0 0 20px #98ff8f, 0 0 25px #98ff8f;
+    color: #98ff8f;
+    -webkit-text-stroke: 0.025rem #60785e;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 0 5px #98ff8f, 0 0 10px #98ff8f, 0 0 15px #98ff8f, 0 0 20px #98ff8f, 0 0 25px #98ff8f;
+    font-size: 5rem;
 }
-h2{
-    color:#b8ffb0
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
 }
-h3{
-    color:#ceffc7
+.content-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
-p{
-    color:#d9f3d6
+.content-section p {
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
