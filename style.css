@@ -26,6 +26,31 @@
   --colorLogo : #98ff8f;
   --colorLogoShadowa : #d8ffd5;
   --colorLogoShadowb : #c6ffc1;
+
+    --colorRojoTC: #ff0000;
+    --colorFondoTC: #eeeeee;
+    --colorSideBar1TC: #ff5151;
+    --colorSideBar2TC: #ff9999c6;
+    --colorSideBarHoverTC: #864d4d;
+    --colorH1TC: #ff8f98;
+    --colorPTC: #faadb4;
+    --colorH2TC: #ff8791;
+    --colorH3TC: #ff8f98;
+    --colorBordeTC: #785e60;
+    --colorShadowH1TC: #ff8f98;
+    --colorShadowH2TC: #ff0015;
+    --colorShadowH3TC: #ff8f98;
+    --colorShadowPTC: #ff838e;
+    --colorFondoPCTC: rgba(20, 20, 20, 0.8);
+    --colorBordeYShadowPCTC: #ff8f98;
+    --colorBordeHoverPCTC: #faadb4;
+    --colorFondoLinkaTC: #ff5151;
+    --colorFondoLinkbTC: #ff8f98;
+    --colorHoverLinkaTC: #ff8f98;
+    --colorHoverLinkbTC: #faadb4;
+    --colorLogoTC: #ff8f98;
+    --colorLogoShadowaTC: #ffd5d8;
+    --colorLogoShadowbTC: #ffc1c6;
 }
 
 body{
@@ -38,6 +63,7 @@ body{
     margin: 0;
     min-height: 100vh;
     overflow-x: hidden;
+    transition: background-color 0.3s ease;
 }
 .page-layout {
     min-height: 100vh;
@@ -251,4 +277,31 @@ h1{
     text-shadow: 0 0 10px var(--colorLogoShadowa), 0 0 20px var(--colorLogoShadowb);
     z-index: 50;
     cursor: pointer;
+}
+.light-mode{
+    background-color: var(--colorFondoTC);
+    --colorVerde: var(--colorRojoTC);
+    --colorFondo: var(--colorFondoTC);
+    --colorSideBar1: var(--colorSideBar1TC);
+    --colorSideBar2: var(--colorSideBar2TC);
+    --colorSideBarHover: var(--colorSideBarHoverTC);
+    --colorH1: var(--colorH1TC);
+    --colorP: var(--colorPTC);
+    --colorH2: var(--colorH2TC);
+    --colorH3: var(--colorH3TC);
+    --colorBorde: var(--colorBordeTC);
+    --colorShadowH1: var(--colorShadowH1TC);
+    --colorShadowH2: var(--colorShadowH2TC);
+    --colorShadowH3: var(--colorShadowH3TC);
+    --colorShadowP: var(--colorShadowPTC);
+    --colorFondoPC: var(--colorFondoPCTC);
+    --colorBordeYShadowPC: var(--colorBordeYShadowPCTC);
+    --colorBordeHoverPC: var(--colorBordeHoverPCTC);
+    --colorFondoLinka: var(--colorFondoLinkaTC);
+    --colorFondoLinkb: var(--colorFondoLinkbTC);
+    --colorHoverLinka: var(--colorHoverLinkaTC);
+    --colorHoverLinkb: var(--colorHoverLinkbTC);
+    --colorLogo: var(--colorLogoTC);
+    --colorLogoShadowa: var(--colorLogoShadowaTC);
+    --colorLogoShadowb: var(--colorLogoShadowbTC);
 }
