@@ -3,7 +3,29 @@
 
 :root {
   --colorVerde: #00ff00;
-  --colorFondo: #000000
+  --colorFondo: #000000;
+  --colorSideBar1 : #4fff51;
+  --colorSideBar2 :  #99ff99c6;
+  --colorSideBarHover:  #52864d;
+  --colorH1 : #98ff8f;
+  --colorP :  #b4faad;
+  --colorH2 : #91ff87;
+  --colorH3 : #98ff8f;
+  --colorBorde : #60785e;
+  --colorShadowH1 : #98ff8f;
+  --colorShadowH2 : #15ff00;
+  --colorShadowH3 : #98ff8f;
+  --colorShadowP : #8eff83;
+  --colorFondoPC : rgba(20, 20, 20, 0.8);
+  --colorBordeYShadowPC : #98ff8f;
+  --colorBordeHoverPC : #b4faad;
+  --colorFondoLinka : #4fff51;
+  --colorFondoLinkb : #98ff8f;
+  --colorHoverLinka : #98ff8f;
+  --colorHoverLinkb : #b4faad;
+  --colorLogo : #98ff8f;
+  --colorLogoShadowa : #d8ffd5;
+  --colorLogoShadowb : #c6ffc1;
 }
 
 body{
@@ -41,7 +63,7 @@ body{
     transform: translateY(-50%);
     width: 90px;
     height: auto;
-    background: linear-gradient(to bottom, #4fff51, #99ff99c6);
+    background: linear-gradient(to bottom, var(--colorSideBar1), var(--colorSideBar2));
     border-radius: 4rem;
     max-height: 85vh;
     z-index: 5;
@@ -89,7 +111,7 @@ body{
     height: auto;
 }
 .sidebar .nav-item a:hover {
-    background-color: #52864d;
+    background-color: var(--colorSideBarHover);
 }
 .main-content {
     margin-left: 0;
@@ -100,11 +122,11 @@ body{
     min-height: 100vh;
 }
 h1{
-    color: #98ff8f;
-    -webkit-text-stroke: 0.025rem #60785e;
+    color: var(--colorH1);
+    -webkit-text-stroke: 0.025rem var(--colorBorde);
     text-align: center;
     margin: 0;
-    text-shadow: 0 0 5px #98ff8f, 0 0 10px #98ff8f, 0 0 15px #98ff8f, 0 0 20px #98ff8f, 0 0 25px #98ff8f;
+    text-shadow: 0 0 5px var(--colorShadowH1), 0 0 10px var(--colorShadowH1), 0 0 15px var(--colorShadowH1), 0 0 20px var(--colorShadowH1), 0 0 25px var(--colorShadowH1);
     font-size: 5rem;
     animation: floating 3s ease-in-out infinite;
 }
@@ -130,17 +152,17 @@ h1{
     text-align: center;
 }
 .content-section h2 {
-    color: #91ff87;
-    -webkit-text-stroke: 0.02rem #60785e;
-    text-shadow: 0 0 5px #15ff00;
+    color: var(--colorH2);
+    -webkit-text-stroke: 0.02rem var(--colorBorde);
+    text-shadow: 0 0 5px var(--colorShadowH2);
     font-size: 3rem;
     margin-bottom: 1rem;
     animation: floating 3s ease-in-out infinite;
 }
 .content-section p {
-    color: #b4faad;
-    -webkit-text-stroke: 0.02rem #60785e;
-    text-shadow: 0 0 5px #8eff83;
+    color: var(--colorP);
+    -webkit-text-stroke: 0.02rem var(--colorBorde);
+    text-shadow: 0 0 5px var(--colorShadowP);
     max-width: 600px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -154,20 +176,20 @@ h1{
     padding: 2rem;
 }
 .project-card {
-    background: rgba(20, 20, 20, 0.8);
-    border: 2px solid #98ff8f;
+    background: var(--colorFondoPC);
+    border: 2px solid var(--colorBordeYShadowPC);
     border-radius: 1rem;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 0 15px #98ff8f;
+    box-shadow: 0 0 15px var(--colorBordeYShadowPC);
     position: relative;
     z-index: 1;
 }
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 30px #98ff8f, 0 0 50px #98ff8f;
-    border-color: #b4faad;
+    box-shadow: 0 0 30px var(--colorBordeYShadowPC), 0 0 50px var(--colorBordeYShadowPC);
+    border-color: var(--colorBordeHoverPC);
     z-index: 100;
 }
 .project-card img {
@@ -180,20 +202,20 @@ h1{
     padding: 1.5rem;
 }
 .project-info h3 {
-    color: #98ff8f;
-    -webkit-text-stroke: 0.015rem #60785e;
-    text-shadow: 0 0 5px #98ff8f;
+    color: var(--colorH3);
+    -webkit-text-stroke: 0.015rem var(--colorBorde);
+    text-shadow: 0 0 5px var(--colorShadowH3);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 .project-info p {
-    color: #b4faad;
+    color: var(--colorP);
     font-size: 0.95rem;
     margin-bottom: 1rem;
 }
 .project-link {
     display: inline-block;
-    background: linear-gradient(45deg, #4fff51, #98ff8f);
+    background: linear-gradient(45deg, var(--colorFondoLinka), var(--colorFondoLinkb));
     color: #000000;
     padding: 0.7rem 1.5rem;
     border-radius: 0.5rem;
@@ -202,9 +224,9 @@ h1{
     transition: all 0.3s ease;
 }
 .project-link:hover {
-    background: linear-gradient(45deg, #98ff8f, #b4faad);
+    background: linear-gradient(45deg, var(--colorHoverLinka), var(--colorHoverLinkb));
     transform: scale(1.05);
-    box-shadow: 0 0 15px #98ff8f;
+    box-shadow: 0 0 15px var(--colorHoverLinka);
 }
 @media (max-width: 768px) {
     .projects-container {
@@ -224,8 +246,9 @@ h1{
     left: 1.5rem;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #98ff8f;
-    -webkit-text-stroke: 0.02rem #60785e;
-    text-shadow: 0 0 10px #d8ffd5, 0 0 20px #c6ffc1;
+    color: var(--colorLogo);
+    -webkit-text-stroke: 0.02rem var(--colorBorde);
+    text-shadow: 0 0 10px var(--colorLogoShadowa), 0 0 20px var(--colorLogoShadowb);
     z-index: 50;
+    cursor: pointer;
 }
