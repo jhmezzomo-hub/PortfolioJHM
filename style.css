@@ -63,6 +63,7 @@ body{
     margin: 0;
     min-height: 100vh;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     transition: background-color 0.3s ease;
 }
 .page-layout {
@@ -71,6 +72,73 @@ body{
     position: relative;
     z-index: 2;
     background-attachment: fixed;
+}
+.top-navbar {
+    position: sticky;
+    top: 0;
+    min-height: 4.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid var(--colorVerde);
+    box-shadow: 0 0 15px var(--colorVerde);
+    z-index: 10;
+}
+.top-navbar .container-fluid {
+    position: relative;
+    min-height: 3rem;
+}
+.top-navbar .logo-brand {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: 0;
+}
+.top-navbar .navbar-collapse {
+    justify-content: center;
+}
+.top-navbar .navbar-nav {
+    gap: 1.25rem;
+    align-items: center;
+}
+.top-navbar .nav-link {
+    color: var(--colorH1);
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-shadow: 0 0 6px var(--colorShadowH1);
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.top-navbar .nav-link:hover,
+.top-navbar .nav-link.active {
+    color: var(--colorVerde);
+    text-shadow: 0 0 10px var(--colorVerde);
+}
+.top-navbar .navbar-toggler {
+    border-color: var(--colorVerde);
+}
+.top-navbar .navbar-toggler-icon {
+    filter: hue-rotate(80deg) brightness(1.5);
+}
+@media (max-width: 991px) {
+    .top-navbar .container-fluid {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .top-navbar .navbar-toggler {
+        order: 2;
+        margin-left: auto;
+    }
+    .top-navbar .logo-brand {
+        position: static;
+        order: 1;
+        transform: none;
+        margin: 0;
+    }
+    .top-navbar .navbar-collapse {
+        order: 3;
+        flex-basis: 100%;
+    }
 }
 .bordes-verdes{
     background-image: 
@@ -277,16 +345,19 @@ h1{
 }
 .logo-brand {
     font-family: "black ops one", sans-serif;
-    position: fixed;
-    top: 1.5rem;
-    left: 1.5rem;
+    position: static;
+    display: block;
+    margin-right: 2rem;
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--colorLogo);
     -webkit-text-stroke: 0.02rem var(--colorBorde);
     text-shadow: 0 0 10px var(--colorLogoShadowa), 0 0 20px var(--colorLogoShadowb);
-    z-index: 50;
     cursor: pointer;
+    text-decoration: none;
+}
+.content-section {
+    scroll-margin-top: 5rem;
 }
 .light-mode{
     background-color: var(--colorFondoTC);

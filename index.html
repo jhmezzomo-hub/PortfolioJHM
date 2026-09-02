@@ -10,8 +10,23 @@
     <title>Portfolio|JHM</title>
     <link rel="icon" type="image/x-icon" href="imagenes\favicon_portfolio.ico">
 </head>
-<body>
-    <div class="logo-brand" type="button" onclick="ChangeMode()">JHM</div>
+<body>  
+    <nav class="navbar navbar-expand-lg top-navbar">
+        <div class="container-fluid">
+            <a class="logo-brand" type="button" onclick="ChangeMode()">JHM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="#sobre-mi">Sobre Mi</a>
+                    <a class="nav-link" href="#habilidades">Habilidades</a>
+                    <a class="nav-link" href="#proyectos">Proyectos</a>
+                    <a class="nav-link" href="#cv">Mi CV</a>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="container-fluid page-layout bordes-verdes">
         <nav class="navbar navbar-dark sidebar">
             <div class="container sidebar-content">
@@ -39,7 +54,7 @@
                 Bienvenido,<br>conoce más de mi.
             </h1>
         </main>
-        <section class="content-section">
+        <section class="content-section" id="sobre-mi">
             <h2><u>Sobre mi</u></h2>
             <p>            
                 Soy Joaquín Mezzomo. Actualmente soy estudiante del Instituto Huergo, donde estoy cursando la carrera de Técnico en Computación.
@@ -49,7 +64,7 @@
                 <br>A su vez, estoy cursando el programa de Diploma Dual, proporcionado por Academica International Studies. Actualmente me encuentro en el primer año, cursando las materias de Inglés II y Criminología.
             </p>
         </section>
-        <section class="content-section">
+        <section class="content-section" id="habilidades">
             <h2><u>Habilidades</u></h2>
             <p>
                 Actualmente, poseo conocimientos en Python, HTML, CSS y SQL, además de un manejo básico de Photoshop.
@@ -58,7 +73,7 @@
                 <br>Cuento con un nivel fluido de inglés, con capacidad para la lectura, escritura y comunicación oral.
             </p>
         </section>
-        <section class="content-section">
+        <section class="content-section" id="proyectos">
             <h2><u>Mis proyectos</u></h2>
             <div class="projects-container">
                 <div class="project-card">
@@ -93,7 +108,7 @@
                 </div>
             </div>
         </section>
-        <section class="content-section">
+        <section class="content-section" id="cv">
             <h2><u>Mi currículum</u></h2>
             <div class="projects-container">
                 <div class="project-card">
@@ -112,7 +127,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <footer>
         <div class="footer-content">
-            <p style="color: #ffffff;">&copy; 2024 JHMezzomo. Todos los derechos reservados.</p>
+            <p style="color: #ffffff; text-align: center;">&copy; 2024 JHMezzomo. Todos los derechos reservados.</p>
         </div>
     </footer>
     <script>
